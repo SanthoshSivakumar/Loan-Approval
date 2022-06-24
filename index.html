@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<h2>LOAN CLASSIFICATION</h2>
+
+<body>
+    <div>
+        <form action="{{ url_for('predict')}}" method="post">
+
+            <h3>Credit History</h3>
+            <input id="first" name="Credit_History" placeholder = "Enter your Credit History"type="number">
+            <h3>Gender Male</h3>
+            <input id="second" name="Gender_Male" type="text" placeholder = "Enter 0 or 1" required="required">
+            <h3>Married Yes</h3>
+            <input id="third" name="Married_Yes" type="number" placeholder = "Enter 0 or 1" required="required">
+            <h3>Property Area Semiurban</h3>
+            <input id="fourth" name="Property_Area_Semiurban" type="number" placeholder = "Enter 0 or 1" required="required">
+            </select>
+            <br><br><button id="sub" type="submit ">submit</button>
+            <br>
+        </form>
+
+        <br>
+
+        {{ prediction_text}}
+
+
+
+
+
+        <style>
+            body::before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+
+                /* Specify the background image to be used */
+                background-image: url('static/images/bg1.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+
+            
+                
+
+                /* Specify the background image */
+                opacity: 0.7;
+                z-index: -1;
+            }
+
+            body {
+
+                /* background-color: darkslategrey; */
+                text-align: center;
+                padding: 100px;
+                /* color: white; */
+
+            }
+
+            #sub {
+                width: 80px;
+                height: 30px;
+                text-align: center;
+                border-radius: 18px;
+                font-size: 15px;
+                background-color: rgb(136, 127, 144);
+            }
+        </style>
+</body>
+
+</html>
